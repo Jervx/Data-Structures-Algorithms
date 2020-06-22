@@ -17,7 +17,7 @@ int main(){
     int x = 0, y = 0;
 
     //bubble sort
-    for(x = 0; x < n; x++){
+    for(x = 0; x < n; x++)
         for(y = 0; y < n-x-1; y++)
             if(arr[y] > arr[y+1]){
                 int t = arr[y];
