@@ -11,9 +11,7 @@ void printArray(int * arr, int n){
 int main(){ 
     int arr [] = {30,18,3,6,40,1};
     int n = 6;
-
     printArray(arr, n);
-
     int x = 0, y = 0;
 
     //bubble sort
@@ -26,9 +24,8 @@ int main(){
             }
 
     printArray(arr,n);
-
 }
 
                 //Condition kung ang current value is > sa next value
                 //kung mas malaki yung current val sa next val then swap natin sila
-                //wag kalimutan gumamit ng temporary variable before swap
+                //wag kalimutan gumamit ng temporary variable before swap kasi para hindi maoverwritten kapag mag saswap
