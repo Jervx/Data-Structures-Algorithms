@@ -18,19 +18,17 @@ int main(){
 
     //bubble sort
     for(x = 0; x < n; x++){
-        for(y = 0; y < n-x-1; y++){
-            //Condition kung ang current value is > sa next value
+        for(y = 0; y < n-x-1; y++)
             if(arr[y] > arr[y+1]){
-                //kung mas malaki yung current val sa next val then swap natin sila
-                //wag kalimutan gumamit ng temporary variable before swap
-
                 int t = arr[y];
                 arr[y] = arr[y + 1];
                 arr[y + 1] = t;
             }
-        }
-    }
 
     printArray(arr,n);
 
 }
+
+                //Condition kung ang current value is > sa next value
+                //kung mas malaki yung current val sa next val then swap natin sila
+                //wag kalimutan gumamit ng temporary variable before swap
