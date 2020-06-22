@@ -27,7 +27,7 @@ int main(){
 }
 
                 /*
-                    Condition kung ang current value is > sa next value 
+                    Condition kung ang current value is > sa next value
                     kung mas malaki yung current val sa next val then swap natin sila
                     wag kalimutan gumamit ng temporary variable before swap kasi para hindi maoverwritten kapag mag saswap
                 */
