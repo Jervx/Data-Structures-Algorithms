@@ -28,6 +28,9 @@ int main(){
     printArray(arr,n);
 }
 
-                //Condition kung ang current value is > sa next value
-                //kung mas malaki yung current val sa next val then swap natin sila
-                //wag kalimutan gumamit ng temporary variable before swap kasi para hindi maoverwritten kapag mag saswap
+                /*
+                    Basically you pick a value
+                    then ichecheck mo kung yung value nayon ay mas mababa sa current selected value
+                    no need to create temp variable before swapping kasi nasa pick value na sya
+                    then set arr[y + 1] value as pick value
+                */
