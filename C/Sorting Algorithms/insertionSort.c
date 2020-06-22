@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//yung function na to ay para sa pag print nang laman ng array wag nyo to pansinin
+//yung function na to ay para sa pag print nang laman ng array wag nyo to pansinin 
 void printArray(int * arr, int n){
     int x = 0;
     printf("Array -> [");
