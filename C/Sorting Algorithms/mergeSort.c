@@ -66,14 +66,11 @@ void mergeSort(int arr[], int l, int r) {
     mergeSort(arr, m + 1, r);
 
     merge(arr, l, m, r);
-
-    printf("\n=============================\nLAST : -> ");
-    printArray(arr,5);
   }
 }
 
 int main(){
-    int ar[] = {5,2,3,4,5,6,7,8,9,10};
+    int ar[] = {5,8,19,3,1};
     int n = sizeof(ar)/sizeof(int);
 
     mergeSort(ar,0,n-1);
