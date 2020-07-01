@@ -11,51 +11,21 @@ void printArray(int arr[], int n){
 int getSize(int * arr){return sizeof(arr)/sizeof(int);}
 
 void merge(int * arr, int p, int q, int r) {
+    int n1 = q - p + 1, n2 = r - q, L[n1], M[n2];
 
-    int n1 = q - p + 1;
-    int n2 = r - q;
+    for (int i = 0; i < n1; i++) L[i] = arr[p + i];
+    for (int j = 0; j < n2; j++) M[j] = arr[q + 1 + j];
 
-    int L[n1], M[n2];
+    int i = 0, j = 0, k = p;
 
-    for (int i = 0; i < n1; i++)
-        L[i] = arr[p + i];
+    while (i < n1 && j < n2) 
+        if (L[i] <= M[j]) 
+            arr[k++] = L[i++];
+        else 
+            arr[k++] = M[j++];
 
-    printf("\n-----------------------------\nL : -> ");
-    printArray(L,getSize(L));
-
-    for (int j = 0; j < n2; j++)
-        M[j] = arr[q + 1 + j];
-
-    printf("\nM : -> ");
-    printArray(M,getSize(M));
-
-    int i, j, k;
-    i = 0;
-    j = 0;
-    k = p;
-
-    while (i < n1 && j < n2) {
-        if (L[i] <= M[j]) {
-            arr[k] = L[i];
-            i++;
-        } else {
-            arr[k] = M[j];
-            j++;
-        }
-        k++;
-    }
-
-    while (i < n1) {
-        arr[k] = L[i];
-        i++;
-        k++;
-    }
-
-    while (j < n2) {
-        arr[k] = M[j];
-        j++;
-        k++;
-    }
+    while (i < n1) arr[k++] = L[i++];
+    while (j < n2) arr[k++] = M[j++];
 }
 
 void mergeSort(int arr[], int l, int r) {
@@ -70,9 +40,11 @@ void mergeSort(int arr[], int l, int r) {
 }
 
 int main(){
-    int ar[] = {5,8,19,3,1};
+    int ar[] = {5, 1, 6, 22, 14, 8, 3, 7, 21, 9};
     int n = sizeof(ar)/sizeof(int);
-
+    int x = 0;
+    printf("\n%d\n",ar[x++]);
+    printArray(ar,n);
     mergeSort(ar,0,n-1);
     printArray(ar,n);
 }

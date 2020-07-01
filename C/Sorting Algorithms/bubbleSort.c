@@ -1,7 +1,10 @@
+
+//JERBEE PARAGAS
+
 #include <stdio.h>
 
-//yung function na to ay para sa pag print nang laman ng array wag nyo to pansinin
-void printArray(int * arr, int n){
+
+void printArray(int arr[], int n){
     int x = 0;
     printf("Array -> [");
     for(; x < n; x++) printf("%d%s",arr[x],x == n-1? "":", ");
@@ -26,8 +29,8 @@ int main(){
     printArray(arr,n);
 }
 
-                /*
-                    Condition kung ang current value is > sa next value
-                    kung mas malaki yung current val sa next val then swap natin sila
-                    wag kalimutan gumamit ng temporary variable before swap kasi para hindi maoverwritten kapag mag saswap
-                */
+    /*
+        Condition kung ang current value is > sa next value
+        kung mas malaki yung current val sa next val then swap natin sila
+        wag kalimutan gumamit ng temporary variable before swap kasi para hindi maoverwritten kapag mag saswap
+    */
